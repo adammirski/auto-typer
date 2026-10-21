@@ -9,9 +9,9 @@ There are two tools inside `auto-typer.zip`:
 
 ## 1. Download
 
-1. Click **`auto-typer.zip`** in the file list above.
-2. Click the **Download raw file** button (the down-arrow icon on the right).
-3. Open your **Downloads** folder and double-click `auto-typer.zip`. You now have a folder called `auto-typer`.
+1. Click this link: **[Download auto-typer.zip](https://github.com/adammirski/auto-typer/raw/main/auto-typer.zip)**
+   (or click `auto-typer.zip` in the file list above, then the **Download raw file** button).
+2. Open your **Downloads** folder and double-click `auto-typer.zip`. You now have a folder called `auto-typer`.
 
 ## 2. Option A: the bookmark (no install)
 
