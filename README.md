@@ -11,7 +11,9 @@ There are two tools inside `auto-typer.zip`:
 
 1. Click this link: **[Download auto-typer.zip](https://github.com/adammirski/auto-typer/raw/main/auto-typer.zip)**
    (or click `auto-typer.zip` in the file list above, then the **Download raw file** button).
-2. Open your **Downloads** folder and double-click `auto-typer.zip`. You now have a folder called `auto-typer`.
+2. Unzip it:
+   - **Mac:** open **Downloads** and double-click `auto-typer.zip`. You now have a folder called `auto-typer`.
+   - **Windows:** open **Downloads**, right-click `auto-typer.zip`, choose **Extract All...**, then **Extract**.
 
 ## 2. Option A: the bookmark (no install)
 
@@ -72,6 +74,53 @@ Without this permission, the app looks like it is typing but nothing arrives.
 
 **To stop early:** move the mouse into the **top-left corner** of the screen.
 
+## 4. Option C: the desktop app on Windows
+
+### Step 1. Find the app folder
+
+Make sure you used **Extract All** in section 1. Double-clicking the zip only *shows* the files, and the app cannot run from there.
+
+In the extracted folder, open `auto-typer`, then `desktop`.
+
+### Step 2. Install Python (once)
+
+1. Go to https://www.python.org/downloads/ and click the yellow **Download Python** button.
+2. Run the installer. On the first screen, **tick "Add python.exe to PATH"** at the bottom, then click **Install Now**.
+
+Check it worked. Press the **Windows key**, type `cmd`, press Enter, and run:
+
+```
+py -c "import tkinter; print(tkinter.TkVersion)"
+```
+
+You should see **8.6** or higher. If you see *"'py' is not recognized"*, close the window, open a new one and retry; if it still fails, run the installer again and choose **Modify**.
+
+### Step 3. Start the app
+
+Double-click **`run-windows.bat`** in the `desktop` folder.
+
+- If a blue **"Windows protected your PC"** box appears, click **More info**, then **Run anyway**. Windows shows this for any script downloaded from the internet.
+- The first start opens a black window for about a minute while it downloads one small library. Later starts are instant.
+
+No extra permission is needed on Windows.
+
+**Nothing opens?** In the `desktop` folder, click the address bar, type `cmd`, press Enter, and run:
+
+```
+.venv\Scripts\python autotyper.py
+```
+
+The error message it prints tells you what is wrong. Some antivirus programs block apps that type keys; if yours does, allow it or use the bookmark (Option A) instead.
+
+### Step 4. Use it
+
+1. Paste your text into the box, or click **Paste clipboard**.
+2. Click **Start**.
+3. During the 5 second countdown, click inside the VM where the text should go.
+4. Do not touch the keyboard until the status says **Done**.
+
+**To stop early:** press **Esc**, or move the mouse into the **top-left corner** of the screen.
+
 ## Tips
 
 - **Each line break is pressed as Enter**, so every line runs as soon as it is typed. For long multi-line PowerShell, type it into Notepad, save it as a `.ps1` file and run that instead.
@@ -79,9 +128,5 @@ Without this permission, the app looks like it is typing but nothing arrives.
 - **Fix smart quotes** (on by default) turns curly quotes `“ ” ‘ ’` and long dashes from web pages and PDFs into plain `" ' -`, which the terminal understands.
 - **Enter at end** is off by default, so you can check the command before it runs.
 - In **vim**, run `:set paste` before typing, so vim does not add extra indentation.
-
-## Windows
-
-Install Python from https://www.python.org/downloads/ (tick **Add python.exe to PATH** in the installer), then double-click `auto-typer\desktop\run-windows.bat`.
 
 More details are in `README.md` inside the zip.
