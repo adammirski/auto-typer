@@ -15,13 +15,8 @@ There are two tools inside `auto-typer.zip`:
    - **Mac:** open **Downloads** and double-click `auto-typer.zip`. You now have a folder called `auto-typer`.
    - **Windows:** open **Downloads**, right-click `auto-typer.zip`, choose **Extract All...**, then **Extract**.
 
-## 2. Option A: the bookmark (no install)
 
-1. Open `auto-typer/install.html` in your browser (double-click it).
-2. Follow **Step 1** on that page: drag the blue **Guac Typer** button to your bookmarks bar.
-3. Open your VM in Guacamole, click the **Guac Typer** bookmark, paste your text into the panel, click inside the VM, then click **Type it**.
-
-## 3. Option B: the desktop app on a Mac
+## 3. The desktop app on a Mac
 
 ### Step 1. Install Python (once)
 
