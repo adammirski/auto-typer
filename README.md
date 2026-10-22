@@ -2,10 +2,7 @@
 
 Copy and paste often does not work in lab VMs opened through Guacamole (in the browser). This tool **types** your text into the VM, key by key, so you don't need the clipboard.
 
-There are two tools inside `auto-typer.zip`:
-
-- **Guac Typer**: a browser bookmark. Nothing to install. Works on Mac, Windows, Linux and in any browser. **Try this first.**
-- **Desktop auto-typer**: a small Mac/Windows app. Use it if the bookmark does not work for you.
+It is a small app for **Mac** and **Windows**. You paste your text into it, click into the VM, and it types the text for you.
 
 ## 1. Download
 
@@ -15,8 +12,7 @@ There are two tools inside `auto-typer.zip`:
    - **Mac:** open **Downloads** and double-click `auto-typer.zip`. You now have a folder called `auto-typer`.
    - **Windows:** open **Downloads**, right-click `auto-typer.zip`, choose **Extract All...**, then **Extract**.
 
-
-## 3. The desktop app on a Mac
+## 2. Mac
 
 ### Step 1. Install Python (once)
 
@@ -69,7 +65,7 @@ Without this permission, the app looks like it is typing but nothing arrives.
 
 **To stop early:** move the mouse into the **top-left corner** of the screen.
 
-## 4. Option C: the desktop app on Windows
+## 3. Windows
 
 ### Step 1. Find the app folder
 
@@ -105,7 +101,7 @@ No extra permission is needed on Windows.
 .venv\Scripts\python autotyper.py
 ```
 
-The error message it prints tells you what is wrong. Some antivirus programs block apps that type keys; if yours does, allow it or use the bookmark (Option A) instead.
+The error message it prints tells you what is wrong. Some antivirus programs block apps that type keys; if yours does, allow the app in its settings.
 
 ### Step 4. Use it
 
@@ -123,5 +119,6 @@ The error message it prints tells you what is wrong. Some antivirus programs blo
 - **Fix smart quotes** (on by default) turns curly quotes `“ ” ‘ ’` and long dashes from web pages and PDFs into plain `" ' -`, which the terminal understands.
 - **Enter at end** is off by default, so you can check the command before it runs.
 - In **vim**, run `:set paste` before typing, so vim does not add extra indentation.
+- **Want to check it works?** Open a text editor in the VM (Notepad, or `nano test.txt` on Linux) and type the contents of `char-test.txt` from the zip. Every line should come out exactly the same.
 
-More details are in `README.md` inside the zip.
+A copy of these instructions is in `README.md` inside the zip.
