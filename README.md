@@ -119,6 +119,17 @@ The error message it prints tells you what is wrong. Some antivirus programs blo
 - **Fix smart quotes** (on by default) turns curly quotes `“ ” ‘ ’` and long dashes from web pages and PDFs into plain `" ' -`, which the terminal understands.
 - **Enter at end** is off by default, so you can check the command before it runs.
 - In **vim**, run `:set paste` before typing, so vim does not add extra indentation.
-- **Want to check it works?** Open a text editor in the VM (Notepad, or `nano test.txt` on Linux) and type the contents of `char-test.txt` from the zip. Every line should come out exactly the same.
+
+## Test that it works
+
+The `tests` folder in the zip has three test texts. Open one on your computer, copy all of it into the auto-typer, and type it into the VM.
+
+| File | Type it into | You should see |
+|---|---|---|
+| `linux-test.txt` | a Linux **terminal** (bash or zsh) | `ALL OK: every character arrived`, then each `EXPECT` line matching the line under it |
+| `powershell-test.txt` | **PowerShell** on Windows | the same |
+| `char-test.txt` | a **text editor** (Notepad, or `nano test.txt`) | every line exactly as in the file |
+
+For the first two, tick **Enter at end** so the last line runs. They only create temporary files and delete them at the end. If something is wrong, they show which characters went missing.
 
 A copy of these instructions is in `README.md` inside the zip.
